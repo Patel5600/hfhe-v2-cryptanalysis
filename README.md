@@ -1,8 +1,36 @@
 # HFHE v2 — Cryptanalytic Investigation & Forensic Laboratory Archive
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Status: Negative Result](https://img.shields.io/badge/Status-Negative_Cryptanalytic_Result-red.svg)](docs/08_FINAL_CONCLUSION.md)
-[![Commitment Pin](https://img.shields.io/badge/pvac__hfhe__cpp-071b0e9-green.svg)](https://github.com/octra-labs/pvac_hfhe_cpp/commit/071b0e909c119de815e284b347c4bd979cb59ef3)
+<div align="center">
+
+<!-- Row 1: Core Research Status Badges -->
+[![Status: Negative Result](https://img.shields.io/badge/Result-Negative_Cryptanalysis-crimson?style=for-the-badge&logo=target&logoColor=white)](docs/08_FINAL_CONCLUSION.md)
+[![Branches: 26 Closed](https://img.shields.io/badge/Branches-26%2F26_Closed-success?style=for-the-badge&logo=checkmarx&logoColor=white)](docs/04_ATTACK_TREE.md)
+[![Residual: LPN Core](https://img.shields.io/badge/Residual_Hard_Core-LPN(4096%2C_1%2F8)-blueviolet?style=for-the-badge&logo=matrix&logoColor=white)](docs/mathematics/lpn.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge&logo=open-source-initiative&logoColor=white)](LICENSE)
+
+<!-- Row 2: Target & Source Specification Badges -->
+[![Target: Octra Challenge](https://img.shields.io/badge/Target-octra--labs%2Fhfhe--challenge-black?style=flat-square&logo=github)](https://github.com/octra-labs/hfhe-challenge)
+[![Pinned Commit](https://img.shields.io/badge/Pinned_Source-pvac__hfhe__cpp%40071b0e9-2ea44f?style=flat-square&logo=git&logoColor=white)](https://github.com/octra-labs/pvac_hfhe_cpp/commit/071b0e909c119de815e284b347c4bd979cb59ef3)
+[![Reproducibility: 100% Deterministic](https://img.shields.io/badge/Reproducibility-100%25_Deterministic-brightgreen?style=flat-square&logo=safari&logoColor=white)](experiments/reproduce/run_all.py)
+[![Security Policy](https://img.shields.io/badge/Security-Responsible_Disclosure-orange?style=flat-square&logo=securityscorecard&logoColor=white)](SECURITY.md)
+
+<!-- Row 3: Cryptographic Parameter Widgets -->
+[![Field: Fp 127-bit](https://img.shields.io/badge/Field-%F0%9D%94%B9(2%5E127--1)-blue?style=flat-square&logo=affinitydesigner&logoColor=white)](docs/mathematics/field_Fp.md)
+[![Group: Ristretto255](https://img.shields.io/badge/Group-Ristretto255_(\u2113%E2%89%882%5E252)-indigo?style=flat-square&logo=subversion&logoColor=white)](docs/mathematics/ristretto_math.md)
+[![Cipher: AES-256-CTR](https://img.shields.io/badge/PRF-AES--256--CTR-teal?style=flat-square&logo=gnuprivacyguard&logoColor=white)](docs/mathematics/prf_R_core.md)
+[![Parity: GF(2) 8192x16384](https://img.shields.io/badge/Parity_Check-GF(2)_8192%C3%9716384-informational?style=flat-square&logo=databricks&logoColor=white)](docs/mathematics/H_matrix.md)
+
+<!-- Row 4: Toolchain & Runtime Environment Widgets -->
+[![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![C++: 17](https://img.shields.io/badge/C%2B%2B-17-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)](cpp/)
+[![NumPy](https://img.shields.io/badge/NumPy-%3E%3D2.0-013243?style=flat-square&logo=numpy&logoColor=white)](https://numpy.org/)
+[![SciPy](https://img.shields.io/badge/SciPy-%3E%3D1.12-8CAAE6?style=flat-square&logo=scipy&logoColor=white)](https://scipy.org/)
+[![PyCryptodome](https://img.shields.io/badge/PyCryptodome-%3E%3D3.20-yellowgreen?style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/pycryptodome/)
+[![Code Style: Black & Ruff](https://img.shields.io/badge/Code_Style-Black_%26_Ruff-black?style=flat-square&logo=codefactor&logoColor=white)](pyproject.toml)
+
+</div>
+
+---
 
 > **EXECUTIVE SUMMARY:** No practical exploit, secret-key recovery, or plaintext recovery was identified across the tested public attack surface of the Octra Labs HFHE v2 challenge. This repository contains the complete forensic research record, theoretical proofs of negative results, C++ verification binaries, reproducible Python experiments, execution transcripts, and chronological research journals.
 
