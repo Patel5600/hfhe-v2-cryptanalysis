@@ -1,41 +1,80 @@
-﻿# Statistical Methods
+# Statistical Methods
 
-## Tests used
+## Principle
 
-### Kolmogorov-Smirnov (KS) test
-Used to compare continuous distributions (e.g., scalar weight distributions
-between REAL and NULL populations). Two-sample variant: `scipy.stats.ks_2samp`.
-Significance threshold: alpha = 0.05.
+Statistical testing is used to falsify concrete hypotheses, not to prove cryptographic security.
 
-### Chi-squared goodness-of-fit
-Used for discrete / categorical distributions (e.g., Legendre symbol
-distributions). `scipy.stats.chisquare`. df = (categories - 1).
+A small p-value is only meaningful relative to the correctly specified null distribution and the exact observable being tested.
 
-### Pearson correlation
-Used for linear dependency between continuous variables.
-`scipy.stats.pearsonr`. Two-tailed p-value.
+## Kolmogorov-Smirnov
 
-### Permutation tests
-For ratio and predicate experiments: shuffle labels 1,000 times,
-compute empirical p-value as fraction of permuted statistics exceeding observed.
+Two-sample KS tests were used for continuous normalized observables and distribution comparisons.
+
+Threshold used for exploratory reporting: alpha = 0.05.
+
+The KS test was not used as a standalone exploit criterion.
+
+## Chi-squared
+
+Chi-squared tests were used for discrete predicates such as:
+
+- Legendre/quadratic character
+- sign agreement
+- LSB partitions
+- parity partitions
+
+Degrees of freedom are the number of categories minus one for the corresponding goodness-of-fit test.
+
+## Pearson correlation
+
+Pearson correlation was used only when a linear relationship was the stated hypothesis.
+
+## Permutation controls
+
+For label-dependent experiments, observed values were retained while labels were shuffled to destroy the hypothesized correspondence.
+
+A permutation p-value was interpreted as empirical evidence against exchangeability under the chosen null.
+
+## Null populations
+
+### Ideal null
+
+Independent random field/group values or independent Bernoulli bits, where appropriate.
+
+### Matched construction null
+
+The same public metadata and pinned construction with fresh cryptographic randomness.
+
+For the LPN/PRF branch, the correct null freezes public metadata, resamples `prf_k`, and lets the constructor generate an independent `S_B`.
+
+### Shuffled null
+
+Observed values retained while their metadata correspondence is permuted.
 
 ## Multiple testing
 
-When running k independent tests simultaneously, we apply Bonferroni correction:
-effective alpha = 0.05 / k.
+Where multiple related predicates were tested, raw p-values are reported together with the number of tests. A formal family-wise claim requires a corrected threshold (e.g. Bonferroni or an appropriate false-discovery procedure).
 
-All p-values reported are the raw (uncorrected) values; Bonferroni-corrected
-thresholds are stated per experiment.
+A raw p > 0.05 is not a proof of no effect, particularly for small samples.
 
-## Sample sizes
+## Important limitations
 
-| Experiment | N | Justification |
-|------------|---|---------------|
-| KS prf_k cross-layer | 5 000 pairs | Power ≥ 0.80 for effect size d ≥ 0.08 |
-| Character/parity predicates | 20 000 | Power ≥ 0.95 for 1% deviation from p=0.5 |
-| Cross-field inversion | 100 000 | Expected 0 events under null; no false negatives |
-| PC KS distribution | 44 | Limited by artifact size |
+Sample size does not establish “no false negatives.” It only establishes the detectable effect size for the chosen test at the chosen confidence/power assumptions.
+
+This repository therefore avoids statements such as “p > 0.05 proves independence.”
+
+## Reported sizes
+
+| Experiment | N / corpus | Purpose |
+|---|---:|---|
+| Joint public_T test | 946 pair observations | cross-layer/key coupling |
+| Shuffled control | 473,000 observations | destroy metadata correspondence |
+| NULL_B | 4,730,000 observations | empirical null baseline |
+| Character/parity predicates | 20,000 toy trials | wrapped-ratio low-dimensional tests |
+| Fp/scalar inversion | 100,000 trials | cross-field compatibility check |
+| PC distribution | 946 pair observations | point-level distribution |
+| PC within-cipher | 22 pairs | wrapped-pair comparison |
 
 ## Seeds
 
-All experiments use `random_seed = 42` unless otherwise noted.
+Where an experiment uses pseudorandom sampling, the exact seed/configuration must be recorded in the experiment manifest.
