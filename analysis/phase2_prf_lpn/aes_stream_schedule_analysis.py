@@ -35,7 +35,7 @@ def run_schedule_audit():
     print(f"Row 3: Word 63 ({hex(r3_words[63])}) is lower 64-bits of Block 129.")
     print(f"Row 3: Noise draw e3 is upper 64-bits of Block 129.")
     print("\nInvariant Verified: Exactly 64 bits of every noise-generating AES block are published in A.")
-    print("Cryptanalytic Target: Distinguishing half-block AES-256 output from random.")
+    print("Cryptanalytic Target: Pr[e_r = 1 | Y_known] != 1/8 (predicting low 3 bits of Y_hidden given Y_known).")
 
 if __name__ == '__main__':
     run_schedule_audit()
