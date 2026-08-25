@@ -87,7 +87,7 @@ $$\forall R \in \mathbb{F}_p \setminus \{1\}: \quad \iota(R) \cdot \iota(R^{-1} 
 ---
 
 ### 2.2. Wrapped Ciphertext Encryption Algebra
-For a plaintext message vector $m \in \mathbb{F}_p^n$ and an ephemeral vector $v \in_R \mathbb{F}_p^n$ sampled freshly per ciphertext:
+For a plaintext message vector $v \in \mathbb{F}_p^n$ (packed by `enc_text()`) and a fresh ephemeral random mask vector $m \in_R \mathbb{F}_p^n$ (sampled via `rand_fp_nonzero()`):
 $$T_0 = R_0 \cdot (v + m) \pmod p$$
 $$T_1 = -R_1 \cdot m \pmod p$$
 where $R_0, R_1 \in \mathbb{F}_p^{n \times n}$ are independent pseudorandom mask matrices generated from master key $prf\_k$.
@@ -98,7 +98,7 @@ $$T_0 + \lambda T_1 = R_0(v + m) + (R_0 R_1^{-1})(-R_1 m) = R_0 v \pmod p$$
 #### Information-Theoretic Barrier to Ratio Recovery:
 1. **Degrees of Freedom:** $\lambda$ is a dense $4096 \times 4096$ matrix comprising $16,777,216$ unknown field elements in $\mathbb{F}_p$.
 2. **Observation Budget:** Each ciphertext exposes only $\approx 1,829$ sparse edge weights.
-3. **Ephemeral Blinding:** Even under hypothetical recovery of $\lambda$, the linear combination isolates $R_0 v$, which is a pseudorandom transformation of the fresh random vector $v$, revealing 0 bits of plaintext $m$.
+3. **Ephemeral Blinding:** Even under hypothetical recovery of $\lambda$, the linear combination isolates $R_0 v$ (the masked plaintext), while $T_1 = -R_1(m + \Delta_1)$ hides the random mask $m$ under independent matrix $R_1$.
 
 ---
 

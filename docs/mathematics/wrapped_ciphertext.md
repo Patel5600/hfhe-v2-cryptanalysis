@@ -8,8 +8,8 @@ HFHE v2 uses a *wrapped* encryption scheme with two mask layers:
     T_1 = -R_1 * m           (BASE layer 1, masks plaintext only)
 
 where:
-- m ∈ Fp^n  : the plaintext message vector
-- v ∈ Fp^n  : a fresh random vector (per encryption)
+- v ∈ Fp^n  : the plaintext message vector (target)
+- m ∈ Fp^n  : a fresh random mask vector (per encryption)
 - R_0, R_1 ∈ Fp^{n×n}  : independent mask matrices derived from prf_k
 
 ## The ratio λ

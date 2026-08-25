@@ -13,7 +13,7 @@ $$stream = \text{AES-256-CTR}(K_D, counter=0)$$
 $$R_i = \text{hash\_to\_fp\_nonzero}(stream) \in \mathbb{F}_p^*$$
 
 ## 3. Wrapped Ciphertext Encryption
-For plaintext message vector $m \in \mathbb{F}_p^n$ and fresh ephemeral random vector $v \in_R \mathbb{F}_p^n$:
+For plaintext message vector $v \in \mathbb{F}_p^n$ (packed with message bytes) and fresh random mask vector $m \in_R \mathbb{F}_p^n$:
 - Base Layer 0: $T_0 = R_0 \cdot (v + m) \pmod p$
 - Base Layer 1: $T_1 = -R_1 \cdot m \pmod p$
 - Ratio parameter: $\lambda = R_0 \cdot R_1^{-1} \pmod p$
