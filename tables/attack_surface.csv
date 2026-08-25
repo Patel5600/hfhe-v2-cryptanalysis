@@ -7,4 +7,4 @@ AS-05,Public Key,powg_B discrete logarithm,Cyclic subgroup DLP,Algebraic reducti
 AS-06,Commitments,Pedersen commitment distribution,rho bias in Z/ell,KS test vs uniform,CLOSED
 AS-07,Commitments,Cross-field Fp/Z_ell cancellation,R * (R^-1 mod p) = 1 mod ell,Exhaustive trial (N=100k),CLOSED
 AS-08,Wrapped Layer,T0/T1 ratio recovery,lambda = R0 * R1^-1,Legendre & parity tests,CLOSED
-AS-09,LPN Core,Generic ISD / BJMM attack,Information set decoding,Complexity estimation,ASSESSED\n
+AS-09,LPN Core,Generic ISD / BJMM attack,Information set decoding,Complexity estimation,ASSESSED\nAS-10,LPN Keystream,AES-CTR word-schedule co-location,Half-block AES conditioning P(e|Y_known),Schedule trace + Dual syndrome reduction,CLOSED
