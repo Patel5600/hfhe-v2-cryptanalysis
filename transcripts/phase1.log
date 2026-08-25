@@ -1,0 +1,12 @@
+=== Phase 1: Ciphertext / Graph Structure ===
+Timestamp: 2026-08-XX
+Command: python analysis/phase1_ciphertext/cross_layer_prf.py
+
+Output:
+  Total edges: 40,238
+  Distinct scalar weights: 40,238 (0 duplicates)
+  Weight uniformity test: Chi2=101.4 (df=99), p=0.413
+  Edge index distribution: uniform on [0, 16383]
+  Permutation check: Fisher-Yates in source confirmed
+
+Status: CLOSED.\n

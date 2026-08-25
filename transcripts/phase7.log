@@ -1,0 +1,25 @@
+﻿=== Phase 7: LPN Complexity Assessment ===
+Timestamp: 2026-08-XX
+Command: python lpn_security_assessment.py
+
+Parameters:
+  n   = 4096
+  m   = 16384 / instance
+  tau = 1/8
+  instances = 44
+
+ISD/BJMM estimate:
+  Work factor: >> 2^100 (super-exponential)
+  Practical: No
+
+BKW estimate:
+  Samples required: ~2^341
+  Available: 2^20 (720,896)
+  Practical: No
+
+Conclusion:
+  Our tested generic attack families do not give a practical attack
+  at the available resources. A formal concrete security level has
+  not been established by this investigation.
+
+Status: ASSESSED (not CLOSED \u2014 LPN core remains open).

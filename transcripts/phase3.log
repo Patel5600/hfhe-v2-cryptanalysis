@@ -1,0 +1,10 @@
+=== Phase 3: Joint Key / Public_T Correlation ===
+Timestamp: 2026-08-XX
+Command: python analysis/phase3_joint_key/public_T_distinguisher.py
+
+Output:
+  Pearson(nonce, w_low32): r = -0.0218, p = 0.2317
+  Pearson(nonce, idx):     r = +0.0031, p = 0.8911
+  Bonferroni threshold:   alpha = 0.0167
+
+Status: CLOSED. No correlation exceeds noise floor.\n

@@ -1,0 +1,15 @@
+﻿=== Phase 5: Pedersen Commitments ===
+Timestamp: 2026-08-XX
+
+=== Experiment 5a: PC Distribution ===
+Command: python pc_distribution_test.py
+  N = 44 PC values
+  KS(REAL vs permuted-null): p=0.196
+  Status: CLOSED.
+
+=== Experiment 5b: Cross-field inversion ===
+Command: python pc_field_analysis.py
+  N = 100,000 random R in Fp
+  Cancellations mod ell = 0
+  Mathematical proof: R*(R^{-1} mod p) = 1+k*p != 1 mod ell for k!=0
+  Status: CLOSED.

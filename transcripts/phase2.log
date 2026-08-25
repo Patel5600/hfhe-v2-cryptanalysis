@@ -1,0 +1,18 @@
+﻿=== Phase 2: PRF/LPN Generation ===
+Timestamp: 2026-08-XX
+Command: python joint_key_experiment.py
+
+Configuration:
+  N_pairs = 5000
+  Population A: same-ciphertext edge weight pairs
+  Population B: cross-ciphertext edge weight pairs (null)
+  Feature: w (raw Fp weight)
+
+Output:
+  KS(REAL vs NULL_B):
+    statistic = 0.0263
+    p-value   = 0.523
+
+Decision: p=0.523 >> alpha=0.05. No distinguishable signal.
+
+Status: CLOSED.

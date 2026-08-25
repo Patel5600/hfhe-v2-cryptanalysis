@@ -1,0 +1,10 @@
+surface_id,component,target_vulnerability,mathematical_basis,investigation_method,verdict
+AS-01,Wire Format,R_com oracle leakage,Direct seed recovery,Source code audit,CLOSED
+AS-02,Edge Array,Tuple ordering correlation,Fisher-Yates CSPRNG shuffle,Source audit + Autocorr,CLOSED
+AS-03,Edge Metadata,Sigma bitvector leakage,sigma_from_H PRF linkage,Source code audit,CLOSED
+AS-04,Public Key,H matrix null space,GF(2) rank deficiency,Gaussian elimination,CLOSED
+AS-05,Public Key,powg_B discrete logarithm,Cyclic subgroup DLP,Algebraic reduction,CLOSED
+AS-06,Commitments,Pedersen commitment distribution,rho bias in Z/ell,KS test vs uniform,CLOSED
+AS-07,Commitments,Cross-field Fp/Z_ell cancellation,R * (R^-1 mod p) = 1 mod ell,Exhaustive trial (N=100k),CLOSED
+AS-08,Wrapped Layer,T0/T1 ratio recovery,lambda = R0 * R1^-1,Legendre & parity tests,CLOSED
+AS-09,LPN Core,Generic ISD / BJMM attack,Information set decoding,Complexity estimation,ASSESSED\n

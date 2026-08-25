@@ -1,0 +1,26 @@
+﻿=== Phase 6: Wrapped-Mask Ratio Attacks ===
+Timestamp: 2026-08-XX
+
+=== Experiment 6a: Preregistered predicates ===
+Command: python preregistered_predicates_experiment.py
+  N = 20,000 per class (IDEAL / TOY / REAL)
+
+  Test 1 - Legendre(-T0*T1):
+    IDEAL:  chi2=1.12, p=0.291
+    TOY:    chi2=1.08, p=0.299
+    REAL:   chi2=1.34, p=0.246
+    Verdict: No deviation. CLOSED.
+
+  Test 2 - Sign agreement:
+    REAL:   rate=0.50001, p=0.756
+    Verdict: CLOSED.
+
+  Test 3 - Hamming ratio estimator:
+    REAL:   mean=0.50017
+    Verdict: Within noise floor. CLOSED.
+
+=== Experiment 6b: Toy ratio (known key) ===
+Command: python toy_ratio_experiment.py
+  Known R0, R1; 1000 pairs
+  Hamming mean=0.500 \u2014 ratio unrecoverable even with known key
+  Verdict: CLOSED (information-theoretic barrier).

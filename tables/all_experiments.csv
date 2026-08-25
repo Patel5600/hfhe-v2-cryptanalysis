@@ -1,0 +1,15 @@
+phase,experiment_id,name,script,sample_size,test_type,statistic,p_value,status
+0,EXP-0.1,Secret CT Parsing,analysis/phase0_artifacts/secret_ct_structure.py,22 CTs,Structural,ByteMatch,1.0,CLOSED
+0,EXP-0.2,PK Parsing,analysis/phase4_public_key/powg_analysis.py,1 PK,Structural,ByteMatch,1.0,CLOSED
+1,EXP-1.1,Scalar Weight Distribution,analysis/phase1_ciphertext/cross_layer_prf.py,40238,Chi2,101.4,0.413,CLOSED
+1,EXP-1.2,Tuple Permutation Autocorr,analysis/phase1_ciphertext/cross_layer_prf.py,40238,Pearson,-0.0014,0.820,CLOSED
+2,EXP-2.1,PRF Cross-Layer Distinguisher,analysis/phase2_prf_lpn/population_b.py,5000 pairs,KS_2samp,0.0263,0.523,CLOSED
+3,EXP-3.1,Public T Nonce Correlation,analysis/phase3_joint_key/public_T_distinguisher.py,40238,Pearson,-0.0218,0.232,CLOSED
+4,EXP-4.1,H Matrix GF(2) Rank,analysis/phase4_public_key/powg_analysis.py,8192 rows,GaussianElim,8192/8192,1.0,CLOSED
+4,EXP-4.2,powg_B DLP Analysis,analysis/phase4_public_key/powg_analysis.py,1,Algebraic,Identity,1.0,CLOSED
+5,EXP-5.1,Pedersen Commitment Distribution,analysis/phase5_pedersen/pc_distribution.py,44,KS_2samp,0.0348,0.196,CLOSED
+5,EXP-5.2,Cross-Field Inversion,analysis/phase5_pedersen/cross_field_inversion.py,100000,ExactModular,0/100000,1.0,CLOSED
+6,EXP-6.1,Legendre Character Test,analysis/phase6_wrapped_ratio/character_tests.py,20000,Chi2,1.3448,0.246,CLOSED
+6,EXP-6.2,Sign Agreement Test,analysis/phase6_wrapped_ratio/character_tests.py,20000,Binomial,Rate=0.500,0.756,CLOSED
+6,EXP-6.3,Toy Ratio Recovery,analysis/phase6_wrapped_ratio/toy_ratio_experiment.py,1000,Hamming,0.5000,1.0,CLOSED
+7,EXP-7.1,LPN Work Factor,analysis/phase7_lpn_complexity/work_factor.py,720896,Complexity,>2^200,-,ASSESSED\n

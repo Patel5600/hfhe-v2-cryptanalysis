@@ -1,0 +1,6 @@
+test_id,description,sample_size,null_distribution,test_statistic,raw_p_value,bonferroni_adjusted_p,significance_verdict
+TEST-01,Phase 2 Cross-Layer PRF KS Test,5000 pairs,Population B (Cross-CT),0.0263,0.5230,1.0000,Fail to Reject Null
+TEST-02,Phase 3 Nonce-Weight Correlation,40238,Permuted Nonce-Weight,-0.0218,0.2317,0.6951,Fail to Reject Null
+TEST-03,Phase 5 PC Distribution KS Test,44,Uniform Ristretto Points,0.0348,0.1960,0.5880,Fail to Reject Null
+TEST-04,Phase 6 Legendre Character Test,20000,Uniform Residue Distribution,1.3448,0.2462,0.7386,Fail to Reject Null
+TEST-05,Phase 6 Sign Agreement Test,20000,Bernoulli(p=0.5),Rate=0.5000,0.7557,1.0000,Fail to Reject Null\n

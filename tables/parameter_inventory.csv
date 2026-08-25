@@ -1,0 +1,12 @@
+parameter,symbol,value,domain,security_relevance
+Field Prime,p,2^127 - 1,Z,Mersenne prime for scalar weights
+Ristretto Order,ell,2^252 + 277423... ,Z,Group order for Pedersen blinding
+LPN Dimension,n,4096,Z,Binary secret vector length
+LPN Sample Count,m,16384,Z,Number of samples per instance
+LPN Noise Rate,tau,1/8,Q,Bernoulli error rate
+Ciphertext Count,N_ct,22,Z,Number of serialized ciphertexts in secret.ct
+Base Layers per CT,N_layers,2,Z,T0 (layer 0) and T1 (layer 1)
+Edges per Layer,N_edges,1829,Z,Average edge tuples per layer
+H Parity Rows,m_bits,8192,Z,GF(2) parity equations
+H Parity Columns,n_bits,16384,Z,GF(2) code length
+powg Base Order,B,337,Z,Cyclic group order\n

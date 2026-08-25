@@ -1,0 +1,116 @@
+﻿# COMMANDS.TXT
+# Complete command-by-command forensic history of the HFHE v2 investigation.
+# These commands were executed in the order shown. Output is in terminal/ logs.
+
+## Environment verification
+
+python --version
+# Python 3.14.2 (tags/v3.14.2:df79316, Dec  5 2025) [MSC v.1944 64 bit (AMD64)]
+
+git --version
+# git version 2.53.0.windows.2
+
+## Repository clones
+
+git clone https://github.com/octra-labs/hfhe-challenge   C:\Dev\octra
+git clone https://github.com/octra-labs/pvac_hfhe_cpp    C:\Dev\pvac_hfhe_cpp
+cd C:\Dev\pvac_hfhe_cpp
+git checkout 071b0e909c119de815e284b347c4bd979cb59ef3
+git log -1 --format="%H %ai %s"
+# 071b0e909c119de815e284b347c4bd979cb59ef3 2026-07-09 18:29:59 +0000 public matrix sampling
+
+## Artifact hash verification
+
+cd C:\Dev\octra
+python -c "
+import hashlib
+for fn in ['secret.ct', 'pk.bin']:
+    h = hashlib.sha256(open(fn,'rb').read()).hexdigest()
+    s = len(open(fn,'rb').read())
+    print(fn, h, s)
+"
+# secret.ct  5da7f82724838bf7a8c4fe95fbf6d573b621c04c9b2f7ae849545cf60223fbab  1963107
+# pk.bin     1e788edff9dea19a782defae053f3757ccf5edd41cd3e24ae44e1496045e9410  3042901
+
+## Source code reading (no commands; read via editor/view_file)
+
+# Files read:
+# C:\Dev\octra\source\pvac_artifact_serialize.hpp     (lines 1-503)
+# C:\Dev\octra\source\hfhe_bounty_artifact.cpp
+# C:\Dev\octra\source\tools\verify_lpn_sample_binding.cpp
+# C:\Dev\pvac_hfhe_cpp\include\pvac\core\types.hpp
+# C:\Dev\pvac_hfhe_cpp\include\pvac\crypto\lpn.hpp
+# C:\Dev\pvac_hfhe_cpp\include\pvac\ops\encrypt.hpp
+# C:\Dev\pvac_hfhe_cpp\include\pvac\crypto\ristretto255.hpp
+
+## Artifact extraction — Phase 0
+
+cd C:\Dev\octra\experiments
+python parse_secret_ct.py
+# 22 CT objects, 1829 edges each, H digest MATCH
+
+## Public key parsing — Phase 0
+
+python -c "
+import zlib, struct
+raw = open('../pk.bin','rb').read()
+data = zlib.decompress(raw)
+print('decompressed:', len(data))
+fields = ['B','m_bits','n_bits','h_col_wt','x_col_wt','err_wt','lpn_n','lpn_t','tau_num','tau_den']
+off=0
+for f in fields:
+    v=struct.unpack_from('<I',data,off)[0]; off+=4
+    print(f, v)
+"
+# B=337, m_bits=8192, n_bits=16384, h_col_wt=192, err_wt=128, lpn_n=4096, lpn_t=16384, tau=1/8
+
+## Fp field library — Phase 1
+
+python fp_field.py
+# All self-tests passing
+
+## Phase 2: PRF/LPN cross-layer distinguisher
+
+python joint_key_experiment.py
+# KS(REAL vs NULL_B): stat=0.0263, p=0.523
+
+## Phase 5: Pedersen commitment distribution
+
+python pc_distribution_test.py
+# KS(REAL vs NULL_B): p=0.196
+
+## Phase 5: Cross-field inversion
+
+python pc_field_analysis.py
+# 0/100,000 cancellations mod ell. CLOSED.
+
+## Phase 6: Preregistered predicates
+
+python preregistered_predicates_experiment.py
+# Legendre(-T0*T1): Chi2=1.3448, p=0.246
+# Sign agreement:   rate=0.500, p=0.756
+# Hamming:          mean=0.50017
+
+## Phase 6: Toy ratio experiment
+
+python toy_ratio_experiment.py
+# Hamming mean=0.500, CLOSED.
+
+## Phase 7: LPN complexity
+
+python lpn_security_assessment.py
+# ISD/BKW work factors computed. No practical attack.
+
+## Final hash verification
+
+python -c "
+import hashlib
+for fn,expected in [
+    ('secret.ct','5da7f82724838bf7a8c4fe95fbf6d573b621c04c9b2f7ae849545cf60223fbab'),
+    ('pk.bin','1e788edff9dea19a782defae053f3757ccf5edd41cd3e24ae44e1496045e9410'),
+]:
+    got = hashlib.sha256(open(fn,'rb').read()).hexdigest()
+    print(fn, 'MATCH' if got==expected else 'MISMATCH')
+"
+# secret.ct MATCH
+# pk.bin    MATCH
