@@ -1,0 +1,4 @@
+﻿attack_family,dimension_n,samples_m,noise_tau,practical_attack,notes
+ISD_BJMM,4096,16384,0.125,No,Super-exponential work factor
+BKW_simple,4096,16384,0.125,No,Requires more samples than available
+Combinatorial_LPN,4096,16384,0.125,No,No sub-threshold cluster found

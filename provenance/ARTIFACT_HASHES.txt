@@ -1,0 +1,7 @@
+﻿# HFHE v2 Challenge Artifact Hashes
+# Generated: 2026-08-25
+#
+# Algorithm: SHA-256
+
+secret.ct  5da7f82724838bf7a8c4fe95fbf6d573b621c04c9b2f7ae849545cf60223fbab  1963107 bytes
+pk.bin     1e788edff9dea19a782defae053f3757ccf5edd41cd3e24ae44e1496045e9410  3042901 bytes

@@ -1,0 +1,9 @@
+﻿# Phase 1 & 2 experiment configuration
+experiment: cross_layer_prf_distinguisher
+seed: 42
+n_pairs: 5000
+alpha: 0.05
+population_a: real          # Same-ciphertext pairs
+population_b: permuted      # Cross-ciphertext pairs (null)
+features: [T, idx, sign, w, ztag, nonce]
+excluded: [sigma, raw_delta]

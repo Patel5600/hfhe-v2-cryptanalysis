@@ -1,0 +1,3 @@
+﻿artifact,sha256,size_bytes,decompressed_bytes,source
+secret.ct,5da7f82724838bf7a8c4fe95fbf6d573b621c04c9b2f7ae849545cf60223fbab,1963107,decompressed,octra-labs/hfhe-challenge
+pk.bin,1e788edff9dea19a782defae053f3757ccf5edd41cd3e24ae44e1496045e9410,3042901,17110454,octra-labs/hfhe-challenge

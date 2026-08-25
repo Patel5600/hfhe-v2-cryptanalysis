@@ -1,0 +1,26 @@
+﻿[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "hfhe-v2-cryptanalysis"
+version = "0.1.0"
+description = "Cryptanalytic investigation of HFHE v2 challenge artifacts"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.0",
+    "scipy>=1.12",
+    "matplotlib>=3.8",
+    "pycryptodome>=3.20",
+]
+
+[project.optional-dependencies]
+dev = ["black", "ruff", "pytest"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.black]
+line-length = 100

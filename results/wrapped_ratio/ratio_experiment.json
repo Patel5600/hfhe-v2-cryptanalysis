@@ -1,0 +1,22 @@
+{
+  "test_1": {
+    "hamming_mean": 0.5001653543307086,
+    "hamming_std": 0.043753261989607294,
+    "fp_dist_mean": 0.5015618070392031,
+    "fp_dist_std": 0.2903525344060327
+  },
+  "test_2": {
+    "exact_match_count": 12,
+    "exact_match_rate": 0.004,
+    "expected_null_rate": 0.002967359050445104
+  },
+  "test_3": {
+    "total_pairs_tested": 5000,
+    "hits_near_lambda": 14,
+    "hit_rate": 0.0028
+  },
+  "test_4": {
+    "pearson_r": -0.021841649837825793,
+    "p_value": 0.23171196229708746
+  }
+}

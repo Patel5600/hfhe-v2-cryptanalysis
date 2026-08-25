@@ -1,0 +1,19 @@
+﻿cff-version: 1.2.0
+message: "If you use this analysis in academic work, please cite as below."
+title: "HFHE v2 Cryptanalytic Investigation"
+authors:
+  - family-names: Patel
+    given-names: Irshad
+date-released: "2026-08-25"
+url: "https://github.com/Patel5600/hfhe-v2-cryptanalysis"
+repository-code: "https://github.com/Patel5600/hfhe-v2-cryptanalysis"
+abstract: >
+  A systematic negative cryptanalytic investigation of the HFHE v2 challenge
+  by Octra Labs. No practical exploit was found across the tested attack surface
+  targeting the public artifacts (secret.ct, pk.bin, 44 LPN samples).
+keywords:
+  - cryptanalysis
+  - LPN
+  - post-quantum
+  - HFHE
+license: MIT

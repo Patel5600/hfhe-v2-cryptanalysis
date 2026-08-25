@@ -1,0 +1,12 @@
+﻿# Phase 6: wrapped ratio experiment configuration
+experiment: wrapped_ratio_attacks
+seed: 42
+n_trials_ideal: 5000
+n_trials_real: 20000
+n_trials_toy: 1000
+tests:
+  - character_legendre
+  - parity_sign_agreement
+  - ratio_estimator
+alpha: 0.05
+bonferroni_k: 3

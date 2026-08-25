@@ -1,0 +1,541 @@
+{
+  "n_ciphers": 22,
+  "analysis": {
+    "n_pc_total": 44,
+    "n_pc_unique": 44,
+    "n_zero_pc": 0,
+    "n_identity_pc": 0
+  },
+  "pc_records": [
+    {
+      "cipher_index": 0,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "58b43bf8c70c89c6e9305991d3730f11e097253c85a6be18924d705fd5bafc3a",
+      "ztag": 6428010632490239098,
+      "nonce_lo": 12130124252602575779,
+      "nonce_hi": 16469220769042745185
+    },
+    {
+      "cipher_index": 0,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "4227cc7b0f08afec8ecece91e4c17a41de4505178e7230a233975d0dcc5fc81e",
+      "ztag": 13443921025081887566,
+      "nonce_lo": 2178279762915945768,
+      "nonce_hi": 41329827203041902
+    },
+    {
+      "cipher_index": 1,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "f02b5ebdb2925a62aae24577d5adaeafb815db2ad0a32720d367501736142214",
+      "ztag": 7698940260678028158,
+      "nonce_lo": 283941943141960623,
+      "nonce_hi": 11849276960856740123
+    },
+    {
+      "cipher_index": 1,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "d24f1cae985bef19c96051f826f4b8e7b088f0fe3b53dbf7e8b8451320ca4951",
+      "ztag": 15226392238146214927,
+      "nonce_lo": 10637330008033211314,
+      "nonce_hi": 7734932955796978397
+    },
+    {
+      "cipher_index": 2,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "2eca95206baeee788ff1e8af46f90e7f38582b81094a556920e5c98b3c852742",
+      "ztag": 599032682386297244,
+      "nonce_lo": 202004649996788039,
+      "nonce_hi": 5103817370855642594
+    },
+    {
+      "cipher_index": 2,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "185bd43e9118e923b42b02ddcc617c69668f2f2696ebd7c45e6e3086baa55839",
+      "ztag": 1700423362061448360,
+      "nonce_lo": 5493969179398349113,
+      "nonce_hi": 18391000954140721286
+    },
+    {
+      "cipher_index": 3,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "e468ddbd9587763e9c26808a0be75bf2c6f4315f917b842d376b73348f49c872",
+      "ztag": 6110358539853766220,
+      "nonce_lo": 333317254037061578,
+      "nonce_hi": 13302219020849409650
+    },
+    {
+      "cipher_index": 3,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "c219929e7876041d6c905dcd41fb3b778d52645b26a3fca12fdef6978df7972e",
+      "ztag": 3392212342455130883,
+      "nonce_lo": 441915194796155401,
+      "nonce_hi": 17326442176723484210
+    },
+    {
+      "cipher_index": 4,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "ecd432cbfa6832e95da3df4b03ee0c54f7cd4337420f0797a92eae7303b4560e",
+      "ztag": 16473319450519736068,
+      "nonce_lo": 12804833943789434575,
+      "nonce_hi": 12887775772112365762
+    },
+    {
+      "cipher_index": 4,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "76b3f120397b8628ac9c03f36acf3794c3d54cec5610541785716587fef4a065",
+      "ztag": 14102764980567695931,
+      "nonce_lo": 13470114052262012235,
+      "nonce_hi": 4435195972006105428
+    },
+    {
+      "cipher_index": 5,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "52e9ccab35c226fe926b5400a70d1c733e4892f77b7efe7dad192718b186b72c",
+      "ztag": 11043603268552872033,
+      "nonce_lo": 1812412813641004394,
+      "nonce_hi": 10296661846697624835
+    },
+    {
+      "cipher_index": 5,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "ba5a509a138192ad30bf688aac5b66fdc4b2d20a304632075092364dd312de7c",
+      "ztag": 3176473704641795742,
+      "nonce_lo": 820380625853669336,
+      "nonce_hi": 17369304077876173296
+    },
+    {
+      "cipher_index": 6,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "2a2fba13b612f21bfe7ae6ac68682d9fc457de99a76a34decf34d8bc8f92af49",
+      "ztag": 13679428562004992980,
+      "nonce_lo": 4134366351024372703,
+      "nonce_hi": 4696289682147806803
+    },
+    {
+      "cipher_index": 6,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "04809ae89996746847696b922444a4925c92641faba9fcedfbef30f2abe5272a",
+      "ztag": 3145865995741224399,
+      "nonce_lo": 7300909219418967585,
+      "nonce_hi": 7802950027120872335
+    },
+    {
+      "cipher_index": 7,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "5efdcc5884cacc154287a67c1187d9df0e242399118aca26bf03bff594d52a01",
+      "ztag": 11508001114701678016,
+      "nonce_lo": 1269316437145126346,
+      "nonce_hi": 9204427532704733276
+    },
+    {
+      "cipher_index": 7,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "5ef25737de38fee1ab97bf4c005257ea45cf7a39bb3ed639517caaa68b4dec4b",
+      "ztag": 6928677010579877662,
+      "nonce_lo": 15954514161261822775,
+      "nonce_hi": 16188761946883505829
+    },
+    {
+      "cipher_index": 8,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "9ead2fd0a70c458c8b9e4e4775df2b4feba2697ae6edabbcadb9d9db80ffd972",
+      "ztag": 6740881708459364656,
+      "nonce_lo": 15912681536164835389,
+      "nonce_hi": 10755014578454241117
+    },
+    {
+      "cipher_index": 8,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "d41c51c265341febe2406f18f6d69da8235ac19e2c8a588a983844616ca31533",
+      "ztag": 17953004338054354465,
+      "nonce_lo": 14338666170688233119,
+      "nonce_hi": 2388260171102582381
+    },
+    {
+      "cipher_index": 9,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "d65d7224f9cacf799e5a1f5222be5a5be45e0d2dae945599e085eae496c6bf6e",
+      "ztag": 13311453295290174655,
+      "nonce_lo": 15046473971340128246,
+      "nonce_hi": 493284659146962904
+    },
+    {
+      "cipher_index": 9,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "b65e630efdfdaa5e119c77a6d8177f8723ded271979a5b76a895ad9fe07d6458",
+      "ztag": 11655021323084891454,
+      "nonce_lo": 10452472620247555117,
+      "nonce_hi": 11675927309267062760
+    },
+    {
+      "cipher_index": 10,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "4afbc98d87fcee3cd8230655cb86fb7907a60229dde52acb6103167a5ccc053e",
+      "ztag": 442809792075961899,
+      "nonce_lo": 426745376610293121,
+      "nonce_hi": 11516271282692924114
+    },
+    {
+      "cipher_index": 10,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "02a598541553d93e86979e5501cd93c47b699c479383f291acb0e5e6ee64f97d",
+      "ztag": 12308104403690053240,
+      "nonce_lo": 15163014373359302748,
+      "nonce_hi": 4704280643228155061
+    },
+    {
+      "cipher_index": 11,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "ca0c4c10c7b4955b4b40aae683344460ad358b80bf03ab5bc0d35e2eaac81343",
+      "ztag": 15232687040836221561,
+      "nonce_lo": 7328595196942630457,
+      "nonce_hi": 2378499134260815679
+    },
+    {
+      "cipher_index": 11,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "18cd2d3040e396c70459e899cf4d887e1a55ca9870b722f29cadcef5edeb9452",
+      "ztag": 17853392518815300318,
+      "nonce_lo": 15397234531197743915,
+      "nonce_hi": 7725458693409290134
+    },
+    {
+      "cipher_index": 12,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "4c02a9b22c3b9ef822dba7906f857786b16239e8dbe89d892300a3d2271c391c",
+      "ztag": 11588902477023828104,
+      "nonce_lo": 3395191349245636146,
+      "nonce_hi": 11732592945827772534
+    },
+    {
+      "cipher_index": 12,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "5623d7b10120551c9a0463dc4f0671f27c9101a4f83a13cf844931f0855a0166",
+      "ztag": 4778418985365954519,
+      "nonce_lo": 17507410054894190828,
+      "nonce_hi": 11543373387680972712
+    },
+    {
+      "cipher_index": 13,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "546ea12e6b9bceb865e7d25034b0a9f8b3e632b37d35b42627d3002704b70c47",
+      "ztag": 17304463206945542529,
+      "nonce_lo": 14598333073636034490,
+      "nonce_hi": 12134977468212593645
+    },
+    {
+      "cipher_index": 13,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "903dc7d738cc2639dba5c14582f65b48dea69dec3228c0d8205a972c2bbec168",
+      "ztag": 17141030591232359001,
+      "nonce_lo": 7624840196225324078,
+      "nonce_hi": 17751391497518461652
+    },
+    {
+      "cipher_index": 14,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "76fc8c29c1530b6c6b96b4a1a05b3cc68b5b51ac48ecfcc50dfedaa02029c211",
+      "ztag": 11685322978185795689,
+      "nonce_lo": 15564578896466807325,
+      "nonce_hi": 11739519506090707926
+    },
+    {
+      "cipher_index": 14,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "a8383d637bed920a3f29bba0459be827817f100a3353085c0eb757093b3f2070",
+      "ztag": 860437604405991923,
+      "nonce_lo": 8460365434405661969,
+      "nonce_hi": 11801060436549278425
+    },
+    {
+      "cipher_index": 15,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "3ce66fd940106195c126cafc3191b2433fd191759a56a479ead07944cbeca24d",
+      "ztag": 1778922711983362089,
+      "nonce_lo": 17043807757255581136,
+      "nonce_hi": 4762228501056742277
+    },
+    {
+      "cipher_index": 15,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "2ad267113a73606bdf11553d345c75d9083c7b453bb495120ae2403b4775f854",
+      "ztag": 5420538285221611887,
+      "nonce_lo": 2505507834686870294,
+      "nonce_hi": 5135191303186108118
+    },
+    {
+      "cipher_index": 16,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "32ce9f1335b7883ad1b00fd011de55985e76a04a4dbbf9b6be1dfd97b19fe763",
+      "ztag": 924484308567958103,
+      "nonce_lo": 16501601217890834088,
+      "nonce_hi": 4518698896159800606
+    },
+    {
+      "cipher_index": 16,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "343abaf4af79a11649af9f2e9801fd6660d7de623e732714016911b743b39273",
+      "ztag": 14252740822852465411,
+      "nonce_lo": 565099674945429764,
+      "nonce_hi": 6416647196243211911
+    },
+    {
+      "cipher_index": 17,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "a0a38ff78795026a895b2bb939cd4bb19caec460c13d9bc95b5716e360e69f73",
+      "ztag": 7808621797741898485,
+      "nonce_lo": 1742624223263525476,
+      "nonce_hi": 9603102379159643779
+    },
+    {
+      "cipher_index": 17,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "80c8b14ee92ce5dd69ec591530b0c1cc13ec47f30194dbeb21b2a2d3d95d9d48",
+      "ztag": 17433852141684515137,
+      "nonce_lo": 3587057704100348172,
+      "nonce_hi": 7508838689252396007
+    },
+    {
+      "cipher_index": 18,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "9e2dce12915a3219eeb7a0ac01fc7b60ed424160fb8ce66fc7c6f904643eb229",
+      "ztag": 5673612277832369957,
+      "nonce_lo": 1864838623772218703,
+      "nonce_hi": 6729664653067874083
+    },
+    {
+      "cipher_index": 18,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "325cfb2987cde7bdaeeb03045dd1025b8314820163558053762e6079a0d0697e",
+      "ztag": 677077295113826012,
+      "nonce_lo": 2981227538505473098,
+      "nonce_hi": 2741366609952159799
+    },
+    {
+      "cipher_index": 19,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "f499ca0b2a196b28a1df80cb3cf0243a2fc0e107309c4d37210919efc4612c11",
+      "ztag": 9069826110979317243,
+      "nonce_lo": 12098450144788522008,
+      "nonce_hi": 8465426163005797105
+    },
+    {
+      "cipher_index": 19,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "2ea2eb60a03c5ce51bcb968b0dca174d56bdf482cb1aa422ca8468b09ad1c218",
+      "ztag": 4887132594149438850,
+      "nonce_lo": 5186114300009808284,
+      "nonce_hi": 16747026700874346840
+    },
+    {
+      "cipher_index": 20,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "5a6426517a3fdfea29a2ff033922e8a0c1fcf5e263efeb3ee8fdc5517ac66572",
+      "ztag": 9444614743301710355,
+      "nonce_lo": 13871632499642952724,
+      "nonce_hi": 2333922625454212951
+    },
+    {
+      "cipher_index": 20,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "70ab626c408aae8f22aa9e374c099db88c6c027479eca381b4cad688b938f732",
+      "ztag": 16452961438077410670,
+      "nonce_lo": 15400842909296545176,
+      "nonce_hi": 11908780728456223405
+    },
+    {
+      "cipher_index": 21,
+      "layer_id": 0,
+      "slot": 0,
+      "pc_hex": "52edc49d20e56b3e33ca69827764cb407d36c9add4d1437a13b5145d0094675c",
+      "ztag": 1761082895782697006,
+      "nonce_lo": 10780386261770500908,
+      "nonce_hi": 14740698682477974565
+    },
+    {
+      "cipher_index": 21,
+      "layer_id": 1,
+      "slot": 0,
+      "pc_hex": "304cf58105b313d33e710997f845ff4d3161ed897534809c909acdf141c4b334",
+      "ztag": 743961876885920026,
+      "nonce_lo": 5586373044024425711,
+      "nonce_hi": 686263750593341535
+    }
+  ],
+  "edge_summary": [
+    {
+      "cipher_index": 0,
+      "n_layers": 2,
+      "n_edges": 43,
+      "slots": 1
+    },
+    {
+      "cipher_index": 1,
+      "n_layers": 2,
+      "n_edges": 47,
+      "slots": 1
+    },
+    {
+      "cipher_index": 2,
+      "n_layers": 2,
+      "n_edges": 54,
+      "slots": 1
+    },
+    {
+      "cipher_index": 3,
+      "n_layers": 2,
+      "n_edges": 56,
+      "slots": 1
+    },
+    {
+      "cipher_index": 4,
+      "n_layers": 2,
+      "n_edges": 57,
+      "slots": 1
+    },
+    {
+      "cipher_index": 5,
+      "n_layers": 2,
+      "n_edges": 67,
+      "slots": 1
+    },
+    {
+      "cipher_index": 6,
+      "n_layers": 2,
+      "n_edges": 68,
+      "slots": 1
+    },
+    {
+      "cipher_index": 7,
+      "n_layers": 2,
+      "n_edges": 72,
+      "slots": 1
+    },
+    {
+      "cipher_index": 8,
+      "n_layers": 2,
+      "n_edges": 67,
+      "slots": 1
+    },
+    {
+      "cipher_index": 9,
+      "n_layers": 2,
+      "n_edges": 80,
+      "slots": 1
+    },
+    {
+      "cipher_index": 10,
+      "n_layers": 2,
+      "n_edges": 80,
+      "slots": 1
+    },
+    {
+      "cipher_index": 11,
+      "n_layers": 2,
+      "n_edges": 84,
+      "slots": 1
+    },
+    {
+      "cipher_index": 12,
+      "n_layers": 2,
+      "n_edges": 94,
+      "slots": 1
+    },
+    {
+      "cipher_index": 13,
+      "n_layers": 2,
+      "n_edges": 92,
+      "slots": 1
+    },
+    {
+      "cipher_index": 14,
+      "n_layers": 2,
+      "n_edges": 96,
+      "slots": 1
+    },
+    {
+      "cipher_index": 15,
+      "n_layers": 2,
+      "n_edges": 95,
+      "slots": 1
+    },
+    {
+      "cipher_index": 16,
+      "n_layers": 2,
+      "n_edges": 108,
+      "slots": 1
+    },
+    {
+      "cipher_index": 17,
+      "n_layers": 2,
+      "n_edges": 105,
+      "slots": 1
+    },
+    {
+      "cipher_index": 18,
+      "n_layers": 2,
+      "n_edges": 109,
+      "slots": 1
+    },
+    {
+      "cipher_index": 19,
+      "n_layers": 2,
+      "n_edges": 116,
+      "slots": 1
+    },
+    {
+      "cipher_index": 20,
+      "n_layers": 2,
+      "n_edges": 120,
+      "slots": 1
+    },
+    {
+      "cipher_index": 21,
+      "n_layers": 2,
+      "n_edges": 119,
+      "slots": 1
+    }
+  ]
+}

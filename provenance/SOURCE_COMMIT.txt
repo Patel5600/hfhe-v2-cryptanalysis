@@ -1,0 +1,10 @@
+﻿# Pinned source commit for pvac_hfhe_cpp
+# This is the implementation commit analysed throughout this investigation.
+
+Repository: https://github.com/octra-labs/pvac_hfhe_cpp
+Commit:     071b0e909c119de815e284b347c4bd979cb59ef3
+Date:       2026-07-09
+Message:    public matrix sampling
+
+Challenge repository: https://github.com/octra-labs/hfhe-challenge
+Challenge commit:     071b0e9

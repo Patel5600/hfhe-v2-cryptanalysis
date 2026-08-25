@@ -1,0 +1,15 @@
+﻿branch,phase,script,n,statistic,pvalue,verdict
+secret_ct_parsing,0,analysis/00_artifact_verification/secret_ct_structure.py,1,PASS,1.0,CLOSED
+pk_bin_parsing,0,,1,PASS,1.0,CLOSED
+h_matrix_rank,4,,8192,8192/8192,1.0,CLOSED
+h_weight_dist,4,,16384,bimodal_192-193,structural,CLOSED
+powgB_dlp,4,,1,B=337=ord(g),trivial,CLOSED
+tuple_ordering,1,,all,CSPRNG_permutation,source,CLOSED
+rcom_oracle,5,,all,absent_from_wire,source,CLOSED
+sigma_bitvectors,1,,all,csprng_u64,source,CLOSED
+cross_layer_prf,2,analysis/02_prf_lpn/population_b.py,5000,0.0263,0.523,CLOSED
+pc_distribution,5,analysis/05_commitments/pc_distribution.py,44,,0.196,CLOSED
+cross_field_inversion,5,analysis/05_commitments/cross_field_inversion.py,100000,0/100000,1.0,CLOSED
+legendre_character,6,analysis/06_wrapped_ratio/character_tests.py,20000,1.3448,0.246,CLOSED
+sign_agreement,6,analysis/06_wrapped_ratio/character_tests.py,20000,0.500,0.756,CLOSED
+ratio_estimator,6,analysis/06_wrapped_ratio/toy_ratio_experiment.py,1000,Hamming=0.500,null,CLOSED

@@ -1,0 +1,9 @@
+﻿{
+  "experiment": "powg_analysis",
+  "B": 337,
+  "group_order": 337,
+  "g_B_is_identity": true,
+  "idx_is_public": true,
+  "verdict": "CLOSED",
+  "notes": "B = ord(g) = 337, so g^B = identity. powg_B exponent is public and provides no DLP advantage."
+}

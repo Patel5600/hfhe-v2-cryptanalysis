@@ -1,0 +1,26 @@
+﻿{
+  "artifacts": {
+    "secret_ct": {
+      "filename": "secret.ct",
+      "sha256": "5da7f82724838bf7a8c4fe95fbf6d573b621c04c9b2f7ae849545cf60223fbab",
+      "size_bytes": 1963107,
+      "source": "https://github.com/octra-labs/hfhe-challenge"
+    },
+    "pk_bin": {
+      "filename": "pk.bin",
+      "sha256": "1e788edff9dea19a782defae053f3757ccf5edd41cd3e24ae44e1496045e9410",
+      "size_bytes": 3042901,
+      "source": "https://github.com/octra-labs/hfhe-challenge"
+    }
+  },
+  "source_pin": {
+    "repo": "https://github.com/octra-labs/pvac_hfhe_cpp",
+    "commit": "071b0e909c119de815e284b347c4bd979cb59ef3",
+    "date": "2026-07-09",
+    "message": "public matrix sampling"
+  },
+  "challenge_pin": {
+    "repo": "https://github.com/octra-labs/hfhe-challenge",
+    "commit": "071b0e9"
+  }
+}

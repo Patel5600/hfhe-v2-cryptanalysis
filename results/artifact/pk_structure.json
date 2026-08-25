@@ -1,0 +1,24 @@
+﻿{
+  "experiment": "pk_structure",
+  "artifact": "pk.bin",
+  "sha256": "1e788edff9dea19a782defae053f3757ccf5edd41cd3e24ae44e1496045e9410",
+  "size_bytes": 3042901,
+  "decompressed_bytes": 17110454,
+  "params": {
+    "B": 337,
+    "m_bits": 8192,
+    "n_bits": 16384,
+    "h_col_wt": 192,
+    "x_col_wt": 128,
+    "err_wt": 128,
+    "lpn_n": 4096,
+    "lpn_t": 16384,
+    "tau": 0.125
+  },
+  "h_rank_gf2": 8192,
+  "h_rank_full": true,
+  "h_weight_distribution": {"192": 8190, "193": 8194},
+  "h_duplicate_columns": 0,
+  "h_digest_match": true,
+  "verdict": "CLOSED"
+}

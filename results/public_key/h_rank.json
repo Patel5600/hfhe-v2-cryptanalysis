@@ -1,0 +1,8 @@
+﻿{
+  "experiment": "h_matrix_rank",
+  "rank": 8192,
+  "expected_rank": 8192,
+  "full_rank": true,
+  "verdict": "CLOSED",
+  "notes": "H is full-rank over GF(2). No null-space vulnerability."
+}

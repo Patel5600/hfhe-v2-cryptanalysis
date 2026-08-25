@@ -1,0 +1,8 @@
+﻿# Phase 7: LPN complexity assessment configuration
+experiment: lpn_complexity
+params:
+  n: 4096
+  m: 16384
+  tau: 0.125
+  instances: 44
+algorithms: [isd_bjmm, bkw_simple]

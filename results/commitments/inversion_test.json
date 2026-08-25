@@ -1,0 +1,10 @@
+﻿{
+  "experiment": "cross_field_inversion",
+  "n_trials": 100000,
+  "seed": 42,
+  "cancellations_mod_ell": 0,
+  "p_field_prime": "170141183460469231731687303715884105727",
+  "ristretto_order_ell": "7237005577332262213973186563042994240857116359379907606001950938285454250989",
+  "verdict": "CLOSED",
+  "notes": "For random R in Fp, R * (R^-1 mod p) = 1 + k*p. Since p << ell, this is NOT 1 mod ell in any tested trial."
+}
