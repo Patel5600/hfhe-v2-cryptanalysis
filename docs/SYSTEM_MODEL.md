@@ -1,57 +1,127 @@
-﻿# System Model
+# System Model
 
-## HFHE v2 Construction Overview
+## 1. Public-key layer
 
-### Key generation
+The public key contains:
 
-    prf_k  (master PRF key)
-     |
-     +-- R1, R2, R3              (Fp^{n x n} masks via prf_R_core)
-     +-- R_noise1, R_noise2, R_noise3   (noise masks)
-     +-- rho                     (Pedersen blinding seed)
+- `Params`
+- `canon_tag`
+- public GF(2) matrix `H`
+- public permutation `ubk.perm` / inverse
+- `H_digest`
+- `omega_B`
+- `powg_B`
 
-    H  (16384 x 8192 GF(2) parity-check matrix, public, from public randomness)
-    g^B  (public group element; g has order 337, B in [1,336])
+Parameters used by the live artifact:
 
-### Encryption
+```text
+B          = 337
+m_bits     = 8192
+n_bits     = 16384
+h_col_wt   = 192
+x_col_wt   = 128
+err_wt     = 128
+lpn_n      = 4096
+lpn_t      = 16384
+tau        = 1/8
+```
 
-For a plaintext m:
+## 2. Master secret material
 
-    v = fresh random vector
-    T0 = R0 * (v + m)    (wrapped layer 0)
-    T1 = -R1 * m         (wrapped layer 1)
+The secret key contains at least two logically distinct components:
 
-Each layer produces edges:
+```text
+prf_k       -> PRF/AES-derived masks and domain-specific values
+lpn_s_bits  -> LPN parity secret S
+```
 
-    edge = (idx, sign, w, ztag, nonce, sigma, PC)
+In `keygen()`, both are independently sampled by the CSPRNG.
 
-where:
-- idx     : column index into H (public, range [0, 16383])
-- sign    : +1 / -1
-- w       : Fp scalar weight (prf_k-derived)
-- ztag    : zero-tag bit
-- nonce   : per-edge nonce
-- sigma   : from sigma_from_H(..., csprng_u64())  — NOT prf_k-rooted
-- PC      : Pedersen commitment = w*G + rho*H (Ristretto255 point)
+Therefore:
 
-Edges are merged by (layer, index, sign), permuted by Fisher-Yates CSPRNG shuffle,
-then serialized. R_com is NOT serialized.
+`S` is not a reversible encoding of `prf_k`.
 
-### Public key structure
+## 3. PRF-derived masks
 
-    B     = 337       (powg_B exponent, public)
-    m_bits  = 8192
-    n_bits  = 16384
-    h_col_wt = 192
-    x_col_wt = 128
-    err_wt   = 128
-    lpn_n    = 4096
-    lpn_t    = 16384
-    tau      = 1/8
+The six mask domains are:
 
-H matrix: 16384 columns, each of Hamming weight ~192/193 (full GF(2) rank 8192).
+```text
+pvac.prf.r.1
+pvac.prf.r.2
+pvac.prf.r.3
+pvac.prf.noise.1
+pvac.prf.noise.2
+pvac.prf.noise.3
+```
 
-### LPN samples
+The masking scalar has the conceptual composition:
 
-44 files, all domain `pvac.prf.r.1` (R1 derivation seed).
-Each file: 16384 samples over dimension 4096, noise rate 1/8.
+`R = R1 * R2 * R3 mod p`.
+
+Noise-generation paths use their own domain-separated PRF values.
+
+## 4. LPN sample generation
+
+The LPN core has the form:
+
+`y_i = <A_i,S> XOR e_i`.
+
+`A` and error generation are driven from the PRF/AES stream, while `S` is an independently generated secret vector.
+
+The challenge publishes 44 files for the `pvac.prf.r.1` sample path.
+
+## 5. Wrapped ciphertext
+
+For the wrapped pair used by the challenge:
+
+`T0 = R0(v + m) mod p`
+
+`T1 = -R1*m mod p`
+
+where `m` is a fresh nonzero Fp mask.
+
+The public layer aggregate is reconstructed from serialized edges as:
+
+`T = Σ sign(e) * w_e * powg_B[idx_e]`.
+
+## 6. Cipher edge representation
+
+Each serialized edge contains:
+
+- layer id
+- public index
+- public sign
+- one or more Fp weights
+- sigma bit-vector
+
+Before serialization the implementation merges edges by `(layer, idx, sign)` and then permutes the result with a CSPRNG shuffle.
+
+Therefore the serialized order does not preserve original hidden N2/N3 tuple grouping.
+
+## 7. Pedersen commitments
+
+Each BASE layer serializes one commitment per slot.
+
+The writer serializes the PC point but omits the legacy `R_com` field.
+
+The commitment path combines a scalar derived from the Fp inverse of the mask with a separate blinding component in the Ristretto group.
+
+Because Fp and the Ristretto scalar field use different moduli, naive multiplication of `R` by `sc_from_fp(R_inv_p)` does not equal one in the scalar field in general.
+
+## 8. Public subgroup
+
+`powg_B` contains consecutive powers of a subgroup generator of order 337.
+
+Every ciphertext edge publishes `idx`, so the subgroup exponent corresponding to that edge is not itself secret.
+
+## 9. Security interpretation
+
+The investigation treats the following as separate objects:
+
+- public infrastructure (`H`, `powg_B`, permutation);
+- PRF/AES-derived masking;
+- independent LPN secret `S`;
+- wrapped plaintext masking `m`;
+- Pedersen commitment hiding.
+
+A break must connect public observables to plaintext/secret recovery through an actual exploitable dependency.
